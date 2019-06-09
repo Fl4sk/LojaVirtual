@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public interface ProductsTools {
   void setProducts(ArrayList<Product> products);
 
@@ -11,5 +13,5 @@ public interface ProductsTools {
 
   void removeProduct(int index);
 
-  void removeAll();
+  void clearAll();
 }
