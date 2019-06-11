@@ -1,0 +1,20 @@
+package javaapplication1;
+import java.util.*;
+import java.util.Calendar;
+    
+public class DataTeste {
+    public static void main(String[] args) {
+        int i = 1 , j = 2, k = 3, m =2;
+        //System.out.println( !( k > m ) );
+        Data data1 = new Data(21,9,1998);
+        Data data2 = new Data(21,9,1998);
+        
+        if(data1.compara(data2) > 0){
+            System.out.println("data1 mais velho");
+        }else if(data1.compara(data2) < 0){
+            System.out.println("data1 mais novo");
+        }else if(data1.compara(data2) == 0){
+            System.out.println("data1 igual");
+        }
+    }
+}
