@@ -1,0 +1,40 @@
+package javaapplication1;
+import java.util.ArrayList;
+//import java.util.Date;
+
+public class Livro {
+    private String titulo;
+    private String subtitulo;
+    private int edicao;
+    ArrayList <Autor> autor;
+   // Date data;
+    
+//construtor
+    public Livro(String titulo, String subtitulo, int edicao, Autor autor){
+           this.titulo = titulo;
+           this.subtitulo = subtitulo;
+           this.edicao = edicao;
+    }
+    //titulo
+    public String getTitulo(){
+      return this.titulo;
+    }
+    public void setTitulo(String titulo){
+      this.titulo = titulo;
+    }
+    //subtitulo
+    public String getSubtitulo(){
+      return this.subtitulo;
+    }
+    public void setSubtitulo(String subtitulo){
+      this.subtitulo = subtitulo;
+    }
+    // edicao
+    public int getEdicao(){
+      return this.edicao;
+    }
+    public void setEdicao(int edicao){
+      this.edicao = edicao;
+    }   
+}
+
