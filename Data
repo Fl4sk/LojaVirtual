@@ -1,0 +1,78 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+
+/**
+ *
+ * @author HAL.9000
+ */
+public class Data {
+    private int Dia;
+    private int Mes;
+    private int Ano;
+
+    public Data(int Dia, int Mes, int Ano) {
+        this.Dia = Dia;
+        this.Mes = Mes;
+        this.Ano = Ano;
+    }
+
+    public int getDia() {
+        return Dia;
+    }
+
+    public void setDia(int Dia) {
+        this.Dia = Dia;
+    }
+
+    public int getMes() {
+        return Mes;
+    }
+
+    public void setMes(int Mes) {
+        this.Mes = Mes;
+    }
+
+    public int getAno() {
+        return Ano;
+    }
+
+    public void setAno(int Ano) {
+        this.Ano = Ano;
+    }
+
+    public int compara(Data data2) {
+        if (this.Ano < data2.getAno()) {
+            // data 1 mais antiga
+            return 1;
+        } else if ((this.Ano > data2.getAno())) {
+            // data 1 mais antiga
+            return -1;
+        } else {
+            // anos iguais
+            if (this.Mes < data2.getMes()) {
+                // data 1 mais antiga
+                return 1;
+            } else if ((this.Mes > data2.getMes())) {
+                // data 1 mais antiga
+                return -1;
+            } else {
+                // meses iguais
+                if (this.Dia < data2.getDia()) {
+                    // data 1 mais antiga
+                    return 1;
+                } else if ((this.Dia > data2.getDia())) {
+                    // data 1 mais antiga
+                    return -1;
+                } else if ((this.Dia == data2.getDia())){
+                    // datas iguais
+                    return 0;
+                }
+            }
+        }
+        return 0;
+    }  
+}
