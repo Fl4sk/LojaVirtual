@@ -1,16 +1,15 @@
-import java.util.HashMap;
+import java.util.TreeMap;
 
 public interface BasketTools {
-  void setProducts(HashMap<Product, Integer> productsQuant);
+    void setProductsQuant(TreeMap<Product, Integer> productsQuant);
 
-  void setProdctQuant(Product product, int quant);
+    void setProdctQuant(Product product, int quant);
 
-  HashMap<Product, Integer> getProducts();
+    TreeMap<Product, Integer> getProductsQuant();
 
-  int getProdctQuant(Product product, int quant);
+    int getProdctQuant(Product product);
 
-  void addProduct(Product product, int quant);
+    void addProduct(Product product, int quant);
 
-  void removeProduct(Product product, int quant);
-
+    void removeProduct(Product product, int quant);
 }

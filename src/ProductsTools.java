@@ -1,17 +1,15 @@
-import java.util.ArrayList;
+import java.util.TreeSet;
 
 public interface ProductsTools {
-  void setProducts(ArrayList<Product> products);
+    void setProducts(TreeSet<Product> products);
 
-  ArrayList<Product> getProducts();
+    TreeSet<Product> getProducts();
 
-  void addProduct(Product product);
+    void addProduct(Product product);
 
-  void addAll(ArrayList<Product> products);
+    void addAll(TreeSet<Product> products);
 
-  void removeProduct(Product product);
+    void removeProduct(Product product);
 
-  void removeProduct(int index);
-
-  void clearAll();
+    void clearAll();
 }
