@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author HAL.9000
+ */
+public class Autor {
+    private String nome;
+    private String sobrenome;
+    
+    public String getNome(){
+      return this.nome;
+    }
+    public void setNome(String nome){
+      this.nome = nome;
+    }
+    public String getSobrenome(){
+      return this.sobrenome;
+    }
+    public void setSobrenome(String sobrenome){
+      this.sobrenome = sobrenome;
+    }
+    public int compareTo (Autor autor){
+          if (autor.getNome().equals(this.nome) && autor.getSobrenome().equals(this.sobrenome)){
+              return 0;
+          }else{
+              return 1;
+          }
+    }
+
+}
