@@ -14,16 +14,6 @@ public class Estoque implements ProductsTools, BasketTools {
         addAll(products);
     }
 
-    public void setProductsQuant(TreeMap<Product, Integer> productsQuant){
-        clearAll();
-        this.productsQuant.putAll(productsQuant);
-    }
-
-    public void setProdctQuant(Product product, int quant){
-        productsQuant.remove(product);
-        addProduct(product, quant);
-    }
-
     public TreeSet<Product> getProducts(){
         TreeSet<Product> products;
 
@@ -58,20 +48,22 @@ public class Estoque implements ProductsTools, BasketTools {
         this.productsQuant.putAll(productsQuant);
     }
 
-    public void removeProduct(Product product, int quant){
+    public void removeProductQuant(Product product, int quant){
+        int a;
+        int b;
 
+        a = getProdctQuant(product);
+        b = a - quant;
+
+        addProduct(product, b);
     }
 
     public void removeProduct(Product product){
-
-    }
-
-    public void removeProduct(int index){
-
+        productsQuant.remove(product);
     }
 
     public void clearAll(){
-
+        productsQuant.clear();
     }
 
 }
